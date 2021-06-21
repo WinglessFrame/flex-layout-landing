@@ -1,0 +1,31 @@
+.btn-inline {
+    border: none;
+    color: $color-primary;
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: 1px;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .2s;
+
+    & span {
+        margin-left: 3px;
+    }
+
+    &:hover {
+        color: $color-grey-dark-1;
+
+        span {
+            margin-left: 8px;
+            transition: all .2s;
+        }
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulse 1s infinite;
+    }
+}

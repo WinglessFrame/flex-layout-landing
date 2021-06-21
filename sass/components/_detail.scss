@@ -1,0 +1,35 @@
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: $color-grey-light-1;
+  border-bottom: 1px solid $color-grey-light-2;
+
+  font-size: 1.5rem;
+
+  @media screen and (max-width: $media-600px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.description {
+  background-color: $color-white;
+  box-shadow: 0 2rem 5rem rgba(#000, .1);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 5rem;
+
+  @media screen and (max-width: $media-600px) {
+    margin-right: 0;
+    margin-bottom: 4rem;
+  }
+
+}
+
+.user-reviews {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,49 @@
+.paragraph {
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+}
+
+.list {
+  margin: 3rem 0;
+  list-style: none;
+  padding: 3rem 0;
+  border-bottom: 1px solid $color-grey-light-2;
+  border-top: 1px solid $color-grey-light-2;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $media-600px) {
+    flex-direction: column;
+  }
+
+  &__item {
+    width: 50%;
+    margin-bottom: 0.7rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-right: 0.7rem;
+      top: 0;
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+
+      @supports not ((mask-image: url) or (mask-size: cover)) {
+        background-image: url(../../img/chevron-thin-right.svg);
+        background-size: cover;
+      }
+
+      mask-image: url("../../img/chevron-thin-right.svg");
+      mask-size: cover;
+      background-color: $color-primary;
+    }
+
+    @media screen and (max-width: $media-600px) {
+      width: 100%;
+    }
+  }
+}

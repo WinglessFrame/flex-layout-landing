@@ -1,0 +1,61 @@
+.btn {
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  border-radius: 9999px;
+  border: none;
+  color: $color-grey-light-1;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(#000, .1);
+  cursor: pointer;
+
+  &__visible,
+  &__hidden {
+    display: inline-block;
+    padding: 2rem 7.5rem;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  &__visible {
+  }
+
+  &__hidden {
+    position: absolute;
+    padding: 2rem 0;
+    left: 0;
+    top: -100%;
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__hidden {
+    top: 0;
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+        to left,
+        $color-primary-light,
+        $color-primary-dark
+      );
+  }
+
+  &:active {
+      transform: translateY(1px);
+  }
+
+  &:focus {
+      outline: none;
+      animation: pulse 1s infinite;
+  }
+}

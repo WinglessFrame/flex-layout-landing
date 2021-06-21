@@ -1,0 +1,118 @@
+.sidebar {
+  background-color: $color-grey-dark-1;
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-nav {
+  &__nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+
+    @media screen and (max-width: $media-900px) {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    font-size: 1.4rem;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      background-color: $color-primary;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s 0.2s cubic-bezier(1, 0, 0, 1),
+        background-color 0.1s;
+      z-index: 1;
+    }
+
+    &:hover::before,
+    &--active::before {
+      transform: scaleY(1);
+      width: 100%;
+    }
+
+    &:active::before {
+      background-color: $color-primary-dark;
+    }
+
+    @media screen and (max-width: $media-900px) {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    color: $color-grey-light-1;
+    z-index: 10;
+    position: relative;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+
+    & span {
+      text-transform: uppercase;
+    }
+  }
+
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: currentColor;
+    margin-right: 2rem;
+  }
+
+  &__legal {
+    align-self: flex-end;
+    // width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem;
+    color: $color-grey-light-4;
+  }
+
+  &__legal-link {
+    display: inline-block;
+
+    &:link,
+    &:active,
+    &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-primary;
+      font-weight: 700;
+      background-color: $color-grey-dark-1;
+      transform: none;
+      transition: all 0.2s;
+      box-shadow: none;
+    }
+
+    &:hover {
+      box-shadow: 0 1.5rem 3rem rgba(#000, 0.3);
+      transform: scale(1.2) rotate(-20deg);
+    }
+  }
+}

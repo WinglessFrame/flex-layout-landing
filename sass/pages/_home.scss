@@ -1,0 +1,13 @@
+.content {
+  display: flex;
+
+  @media screen and (max-width: $media-900px) {
+    flex-direction: column;
+  }
+}
+
+.hotel-view {
+  background-color: $color-white;
+  flex: 1 0 82%;
+  min-height: 50rem;
+}

@@ -1,0 +1,25 @@
+@import "./abstracts/variables";
+@import "./abstracts/animations";
+@import "./abstracts/typography";
+
+@import "./base/base";
+
+
+@import "./layout/container";
+
+
+@import "./pages/home";
+
+
+@import "./components/header";
+@import "./components/sidebar";
+@import "./components/search";
+@import "./components/user-nav";
+@import "./components/gallary";
+@import "./components/overview";
+@import "./components/btn-inline";
+@import "./components/detail";
+@import "./components/recommend";
+@import "./components/review";
+@import "./components/cta";
+@import "./components/btn"

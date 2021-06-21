@@ -1,0 +1,23 @@
+.header {
+    height: 7rem;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-grey-light-2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $media-400px) {
+        flex-wrap: wrap;
+        height: 12rem;
+        align-content: space-around;
+    }
+
+    font-size: 1.4rem;
+
+    &__logo {
+        height: 3.25rem;
+        margin-left: 2rem;
+    }
+}
+
+
